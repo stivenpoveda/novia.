@@ -1,12 +1,12 @@
 // Mensajes para cada día de la semana
 const messages = [
     "Lunes: Eres la luz de mis días. 🌟",
-    "Martes: Cada momento contigo es mágico. 💖",
-    "Miércoles: Tu amor llena mi corazón. 💕",
-    "Jueves: Gracias por ser mi inspiración diaria. 🌹",
-    "Viernes: Contigo, todo es posible. ❤️",
-    "Sábado: Eres mi alegría constante. 😊",
-    "Domingo: Mi amor por ti nunca termina. 🌈"
+    "Martes: Amar es encontrar en ti un reflejo perfecto de lo que siempre soñé, y en cada día a tu lado, descubrir nuevas razones para seguir soñando. 💖",
+    "Miércoles: En tus ojos veo el universo entero, y en cada suspiro contigo, descubro que la vida tiene más sentido cuando te tengo cerca. 💕",
+    "Jueves: Cada vez que te miro, entiendo que el destino no es un concepto abstracto, sino el momento en que dos almas deciden ser una. 🌹",
+    "Viernes: Amarte es como comprender la belleza de una estrella: un amor tan profundo que, aunque no podamos tocarlo, sabemos que está en cada rincón de nuestro ser ❤️",
+    "Sábado: Cada momento a tu lado me recuerda que el verdadero amor no es un sueño, sino una realidad que se construye con cada latido de nuestro corazón. 😊",
+    "Domingo: Te amo no solo por lo que eres, sino por todo lo que soy cuando estoy contigo, como si tú fueras el principio de un nuevo yo. 🌈"
 ];
 
 // Obtener el día actual y ajustarlo (Lunes=0, Domingo=6)
