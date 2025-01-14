@@ -9,19 +9,29 @@ const messages = [
     "Domingo: Mi amor por ti nunca termina. 🌈"
 ];
 
-// Obtener el día actual
+// Obtener el día actual y ajustarlo (Lunes=0, Domingo=6)
 const today = new Date().getDay();
-document.getElementById("message").textContent = messages[today];
+const adjustedDay = today === 0 ? 6 : today - 1;  // Si es domingo (0), asignamos 6 (Sábado)
 
-// Función para abrir el sobre
-function openEnvelope() {
-    const envelope = document.querySelector('.envelope');
-    const flap = document.querySelector('.envelope-flap');
-    const card = document.querySelector('.card');
+// Mostrar el mensaje correspondiente al día ajustado
+document.getElementById("message").textContent = messages[adjustedDay];
 
-    // Girar el sobre y mostrar la carta
-    flap.style.transform = "rotateX(-180deg)";
-    envelope.style.transform = "rotateY(180deg)";
-    card.style.transform = "rotateY(0deg)";
-    card.style.opacity = "1";
+// Función para hacer girar la carta al hacer clic
+function rotateCard() {
+    const card = document.getElementById("card");
+
+    // Verificar si la carta ya tiene la clase 'clicked' (si está girada)
+    if (card.classList.contains("clicked")) {
+        // Si está girada, quitar la clase para volver al estado original
+        card.classList.remove("clicked");
+        document.getElementById("back-message").textContent = ''; // Limpiar el mensaje cuando vuelva al frente
+    } else {
+        // Si no está girada, agregar la clase para girarla
+        card.classList.add("clicked");
+
+        // Mostrar el mensaje del reverso
+        setTimeout(() => {
+            document.getElementById("back-message").textContent = messages[adjustedDay];
+        }, 500); // Espera un poco para asegurar que la animación de giro se haya realizado
+    }
 }

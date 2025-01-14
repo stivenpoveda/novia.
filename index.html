@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,22 @@
     <title>Carta para Juliana</title>
 </head>
 <body>
-    <h1>Hola Vida, hoy recuerdame en este mensaje :</h1>
+    <h1>Hola Vida, hoy recuérdame en este mensaje:</h1>
     <div class="container">
-        <div class="envelope" onclick="openEnvelope()">
-            <div class="envelope-flap"></div>
-            <div class="envelope-body"></div>
-        </div>
-        <div class="card">
+        <!-- Carta que girará -->
+        <div class="card" id="card" onclick="rotateCard()">
+            <!-- Frente de la carta -->
             <div class="card-header">Para Juliana</div>
             <div class="card-body" id="message">Aquí irá el mensaje del día.</div>
             <div class="card-footer">Con amor, tu novio 💕</div>
+            
+            <!-- Reverso de la carta con el mensaje del día -->
+            <div class="back">
+                <p id="back-message">Este es el mensaje oculto.</p>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

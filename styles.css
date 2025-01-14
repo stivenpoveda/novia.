@@ -8,13 +8,12 @@ body {
     height: 100vh;
     margin: 0;
     background: url('imagenes/WhatsApp Image 2025-01-14 at 10.18.24 AM.jpeg') no-repeat center center fixed;
-    background-size: cover; /* Esto asegura que la imagen cubra toda el área visible */
-    background-position: center center; /* Esto asegura que la imagen se centre en la pantalla */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     backdrop-filter: blur(5px);
     color: #333;
 }
-
 
 /* Estilo del título */
 h1 {
@@ -33,60 +32,27 @@ h1 {
     align-items: center;
 }
 
-/* Estilo del sobre */
-.envelope {
-    position: relative;
-    width: 220px;
-    height: 130px;
-    background: #ffd6ba;
-    border: 2px solid #ffab8e;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.envelope-flap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background: #ffab8e;
-    border-bottom: 2px solid #d4866b;
-    border-radius: 10px 10px 0 0;
-    transform-origin: top;
-    transition: transform 0.6s;
-    backface-visibility: hidden;
-}
-
-.envelope-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: #ffd6ba;
-}
-
 /* Estilo de la carta */
 .card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
     width: 260px;
     height: 180px;
     background: #fff;
-    border: 2px solid #ffab8e;
+    border: 3px solid #ffab8e; /* Bordes más gruesos para dar un toque más real */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transform: translate(-50%, -50%) rotateY(90deg);
-    opacity: 0;
-    transition: transform 0.6s, opacity 0.6s;
+    transform-style: preserve-3d; /* Permite la animación de 3D */
+    transition: transform 1s; /* Tiempo de animación al girar */
+    cursor: pointer; /* Cambia el cursor cuando pasas sobre la carta */
 }
 
+/* Efecto de giro al hacer clic */
+.card.clicked {
+    transform: rotateY(180deg); /* Gira la carta en el eje Y */
+}
+
+/* Estilo del contenido de la carta */
 .card-header {
     background: #ffd6ba;
     padding: 10px;
@@ -96,12 +62,14 @@ h1 {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
+/* Cuerpo de la carta */
 .card-body {
     padding: 20px;
     font-size: 1.2rem;
     color: #555;
 }
 
+/* Pie de la carta */
 .card-footer {
     background: #ffd6ba;
     padding: 10px;
@@ -109,4 +77,29 @@ h1 {
     font-size: 0.9rem;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Reverso de la carta */
+.card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffab8e;
+    border: 3px solid #ffab8e;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    backface-visibility: hidden; /* Evita que el reverso se vea cuando gira */
+    transform: rotateY(180deg); /* Reverso de la carta */
+}
+
+/* Asegurarse de que el reverso de la carta no se vea hasta que se gire */
+.card .back p {
+    margin: 0;
 }
