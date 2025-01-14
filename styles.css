@@ -1,0 +1,112 @@
+/* Fondo translúcido */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('imagenes/WhatsApp Image 2025-01-14 at 10.18.24 AM.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Esto asegura que la imagen cubra toda el área visible */
+    background-position: center center; /* Esto asegura que la imagen se centre en la pantalla */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    backdrop-filter: blur(5px);
+    color: #333;
+}
+
+
+/* Estilo del título */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del sobre */
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 130px;
+    background: #ffd6ba;
+    border: 2px solid #ffab8e;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #ffab8e;
+    border-bottom: 2px solid #d4866b;
+    border-radius: 10px 10px 0 0;
+    transform-origin: top;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.envelope-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: #ffd6ba;
+}
+
+/* Estilo de la carta */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    height: 180px;
+    background: #fff;
+    border: 2px solid #ffab8e;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotateY(90deg);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.card-header {
+    background: #ffd6ba;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card-footer {
+    background: #ffd6ba;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
