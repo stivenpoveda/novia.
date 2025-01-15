@@ -13,7 +13,7 @@ const messages = [
 const today = new Date().getDay();
 const adjustedDay = today === 0 ? 6 : today - 1;  // Si es domingo (0), asignamos 6 (Sábado)
 
-// Mostrar el mensaje correspondiente al día ajustado
+// Mostrar el mensaje correspondiente al día ajustado en el frente de la carta
 document.getElementById("message").textContent = messages[adjustedDay];
 
 // Función para hacer girar la carta al hacer clic
@@ -35,3 +35,12 @@ function rotateCard() {
         }, 500); // Espera un poco para asegurar que la animación de giro se haya realizado
     }
 }
+
+// Función para abrir WhatsApp con el mensaje predefinido
+function openWhatsApp() {
+    const whatsappLink = `https://wa.me/1234567890?text=${encodeURIComponent('¡Hola! Vi tu carta y me encantó.')}`;
+    window.open(whatsappLink, '_blank');
+}
+
+// Asignar el evento al botón de WhatsApp
+document.getElementById("whatsapp-button").addEventListener("click", openWhatsApp);

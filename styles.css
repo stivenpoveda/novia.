@@ -1,4 +1,4 @@
-/* Fondo translúcido */
+/* Fondo translúcido con imagen */
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -11,14 +11,14 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* Filtro de desenfoque */
     color: #333;
 }
 
 /* Estilo del título */
 h1 {
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -30,21 +30,24 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 /* Estilo de la carta */
 .card {
     position: relative;
     width: 260px;
-    height: 180px;
+    height: 300px;
     background: #fff;
     border: 3px solid #ffab8e; /* Bordes más gruesos para dar un toque más real */
-    border-radius: 10px;
+    border-radius: 15px; /* Bordes redondeados más suaves */
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transform-style: preserve-3d; /* Permite la animación de 3D */
     transition: transform 1s; /* Tiempo de animación al girar */
     cursor: pointer; /* Cambia el cursor cuando pasas sobre la carta */
+    margin: 20px;
 }
 
 /* Efecto de giro al hacer clic */
@@ -55,8 +58,8 @@ h1 {
 /* Estilo del contenido de la carta */
 .card-header {
     background: #ffd6ba;
-    padding: 10px;
-    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -65,21 +68,22 @@ h1 {
 /* Cuerpo de la carta */
 .card-body {
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
+    font-weight: 500;
 }
 
 /* Pie de la carta */
 .card-footer {
     background: #ffd6ba;
     padding: 10px;
-    border-radius: 0 0 10px 10px;
-    font-size: 0.9rem;
+    border-radius: 0 0 15px 15px;
+    font-size: 1rem;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* Reverso de la carta */
+/* Mensaje posterior que aparece después de girar */
 .card .back {
     position: absolute;
     top: 0;
@@ -88,7 +92,7 @@ h1 {
     height: 100%;
     background: #ffab8e;
     border: 3px solid #ffab8e;
-    border-radius: 10px;
+    border-radius: 15px;
     color: white;
     display: flex;
     justify-content: center;
@@ -102,4 +106,43 @@ h1 {
 /* Asegurarse de que el reverso de la carta no se vea hasta que se gire */
 .card .back p {
     margin: 0;
+}
+
+/* Estilo del botón de WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Icono de WhatsApp */
+.whatsapp-button img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Estilo cuando el botón de WhatsApp es hover */
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+/* Estilos responsivos para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+    }
 }
