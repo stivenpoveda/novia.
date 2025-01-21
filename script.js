@@ -1,12 +1,13 @@
 // Mensajes para cada día de la semana
 const messages = [
-    "Lunes: Eres la luz de mis días. 🌟",
-    "Martes: Amar es encontrar en ti un reflejo perfecto de lo que siempre soñé, y en cada día a tu lado, descubrir nuevas razones para seguir soñando. 💖",
-    "Miércoles: En tus ojos veo el universo entero, y en cada suspiro contigo, descubro que la vida tiene más sentido cuando te tengo cerca. 💕",
-    "Jueves: Cada vez que te miro, entiendo que el destino no es un concepto abstracto, sino el momento en que dos almas deciden ser una. 🌹",
-    "Viernes: Amarte es como comprender la belleza de una estrella: un amor tan profundo que, aunque no podamos tocarlo, sabemos que está en cada rincón de nuestro ser ❤️",
-    "Sábado: Cada momento a tu lado me recuerda que el verdadero amor no es un sueño, sino una realidad que se construye con cada latido de nuestro corazón. 😊",
-    "Domingo: Te amo no solo por lo que eres, sino por todo lo que soy cuando estoy contigo, como si tú fueras el principio de un nuevo yo. 🌈"
+    "Lunes: Eres el amanecer que despeja mis noches, el comienzo perfecto de cada uno de mis días. ☀️",  
+"Martes: Amar es descubrir contigo que los sueños no terminan al despertar, porque contigo la vida misma es un sueño eterno. ✨",  
+"Miércoles: Tus ojos son como faros en la oscuridad, guiándome hacia un amor que es infinito como el cielo. 🌌",  
+"Jueves: El destino no escribió nuestra historia, lo hicimos nosotros cuando decidimos amarnos más allá de lo imaginable. 💍",  
+"Viernes: Eres el verso perdido de mi poesía, el secreto que el universo susurra en cada estrella que brilla. 🌠",  
+"Sábado: A tu lado aprendí que el tiempo no se mide en horas, sino en momentos que dejan huellas imborrables en el alma. 💞",  
+"Domingo: Tu amor es el refugio donde mi corazón descansa, y contigo comienzo y termino cada semana, completo y feliz. 🕊️"  
+
 ];
 
 // Obtener el día actual y ajustarlo (Lunes=0, Domingo=6)
