@@ -1,18 +1,12 @@
 // Mensajes para cada día de la semana
 const messages = [
-    "Lunes: Eres el primer rayo de sol que acaricia mi alma, iluminando con tu amor cada nuevo comienzo. ☀️"
-
-"Martes: Si el amor es un viaje, tú eres mi destino y cada camino que me lleva a ti. 🚀"
-
-"Miércoles: En el universo de mis pensamientos, tú eres la constelación que siempre guía mi corazón. ✨"
-
-"Jueves: Nuestro amor no es casualidad, es la obra maestra que el tiempo y la vida pintaron con cada latido. 🎨"
-
-"Viernes: Bailamos al ritmo del destino, y en cada paso descubro que el amor eres tú. 💃❤️"
-
-"Sábado: A tu lado, las horas no se cuentan, se sienten, se viven, se aman. ⏳💕"
-
-"Domingo: Eres mi paz y mi tormenta, la calma donde mi alma reposa y el fuego que aviva mi ser. 🔥🕊️"  
+    "Lunes: Eres el primer rayo de sol que acaricia mi alma, iluminando con tu amor cada nuevo comienzo. ☀️",
+    "Martes: Si el amor es un viaje, tú eres mi destino y cada camino que me lleva a ti. 🚀",
+    "Miércoles: En el universo de mis pensamientos, tú eres la constelación que siempre guía mi corazón. ✨",
+    "Jueves: Nuestro amor no es casualidad, es la obra maestra que el tiempo y la vida pintaron con cada latido. 🎨",
+    "Viernes: Bailamos al ritmo del destino, y en cada paso descubro que el amor eres tú. 💃❤️",
+    "Sábado: A tu lado, las horas no se cuentan, se sienten, se viven, se aman. ⏳💕",
+    "Domingo: Eres mi paz y mi tormenta, la calma donde mi alma reposa y el fuego que aviva mi ser. 🔥🕊️" 
 
 ];
 
