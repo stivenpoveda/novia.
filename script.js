@@ -1,10 +1,10 @@
 // Mensajes para cada día de la semana
 const messages = [
-    "Lunes: Cada amanecer a tu lado es la promesa de un amor que nunca dejará de brillar. ☀️❤️",
+"Lunes: Cada amanecer a tu lado es la promesa de un amor que nunca dejará de brillar. ☀️❤️",
 "Martes: No eres solo mi destino, eres el sueño del que nunca quiero despertar. 🌙💖",
 "Miércoles: Si el universo me diera a elegir mil veces, en cada una volvería a escogerte a ti. ✨💕",
 "Jueves: Somos dos almas que se reconocieron en la eternidad y decidieron amarse sin final. 💫💞",
-"Amor mío, hoy celebramos un año de esta hermosa historia que hemos construido juntos, un año de risas, de complicidad, de abrazos que sanan y de miradas que lo dicen todo. Gracias por cada momento, por ser mi refugio, mi paz y mi felicidad. No hay palabras suficientes para describir cuánto te amo, pero quiero que sepas que mi corazón es y siempre será tuyo. Que este sea solo el primero de muchos años más a tu lado. Te amo con toda mi alma. ❤️✨",
+"Viernes: Amor mío, hoy celebramos un año de esta hermosa historia que hemos construido juntos, un año de risas, de complicidad, de abrazos que sanan y de miradas que lo dicen todo. Gracias por cada momento, por ser mi refugio, mi paz y mi felicidad. No hay palabras suficientes para describir cuánto te amo, pero quiero que sepas que mi corazón es y siempre será tuyo. Que este sea solo el primero de muchos años más a tu lado. Te amo con toda mi alma. ❤️✨",
 "Sábado: No existe rincón en el mundo que sea más hogar que tus brazos. 🏡💖",
 "Domingo: En cada latido de mi corazón, tu nombre resuena como la más dulce melodía. 🎶💓"
 
