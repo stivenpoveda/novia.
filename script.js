@@ -4,7 +4,7 @@ const messages = [
 "Martes: En cada latido de mi corazón hay un ‘te amo’ dedicado solo a ti . 🌙💖",
 "Miércoles: Si el universo me diera a elegir mil veces, en cada una volvería a escogerte a ti. ✨💕",
 "Jueves: Somos dos almas que se reconocieron en la eternidad y decidieron amarse sin final. 💫💞",
-"Viernes: A tu lado entendí que el amor no se trata de encontrar a alguien perfecto, sino de encontrar a alguien que haga perfecta tu vida."
+"Viernes: A tu lado entendí que el amor no se trata de encontrar a alguien perfecto, sino de encontrar a alguien que haga perfecta tu vida.",
 "Sábado: No existe rincón en el mundo que sea más hogar que tus brazos. 🏡💖",
 "Domingo: En cada latido de mi corazón, tu nombre resuena como la más dulce melodía. 🎶💓"
 
