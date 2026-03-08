@@ -14,18 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mensajes románticos aleatorios (si se quiere variar)
     const messages = [
         "Eres la casualidad más bonita que llegó a mi vida. Te amo infinitamente.",
-        "Cada día a tu lado es un regalo. Gracias por existir, Juliana.",
+        "Cada día a tu lado es un regalo. Gracias por existir, vida mia .",
         "No importa lo que pase, mi lugar favorito siempre será contigo.",
         "Tu sonrisa ilumina mis días más grises. Te adoro.",
         "Contigo, hasta el infinito y más allá. ❤️"
     ];
 
-    // Descomentar para activar mensaje aleatorio cada vez que recarga
-    /*
+    // Lógica para mensaje del Día de la Mujer (8 de marzo)
+    const today = new Date();
+    const isWomensDay = today.getDate() === 8 && today.getMonth() === 2; // 8 de marzo (meses van de 0-11)
+
     const messageElement = document.getElementById('back-message');
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    messageElement.textContent = randomMessage;
-    */
+    
+    if (isWomensDay) {
+        // Mensaje especial para el 8 de marzo
+        document.querySelector('.message-title').textContent = "¡Feliz Día de la Mujer! 🌹";
+        messageElement.textContent = "Feliz día de la mujer mi vida, te amo inmensamente. Gracias por estar en mi vida. Te amo, te amo y te amo vida mía. ❤️";
+    } else {
+        // Mensaje aleatorio para otros días (opcional, o mantener el fijo del HTML)
+        /*
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        messageElement.textContent = randomMessage;
+        */
+    }
 });
 
 function createHeartExplosion() {
