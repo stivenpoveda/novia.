@@ -1,148 +1,208 @@
-/* Fondo translúcido con imagen */
+:root {
+    --primary-color: #ff6b81;
+    --secondary-color: #ff4757;
+    --bg-gradient-start: #f8c291;
+    --bg-gradient-end: #e77f67;
+    --text-color: #2f3542;
+    --card-bg: #fff0f3;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
-    background: url('imagenes/WhatsApp Image 2025-01-14 at 10.18.24 AM.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    backdrop-filter: blur(5px); /* Filtro de desenfoque */
-    color: #333;
-}
-
-/* Estilo del título */
-h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-/* Contenedor principal */
-.container {
-    position: relative;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    z-index: 1;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    overflow: hidden;
 }
 
-/* Estilo de la carta */
-.card {
-    position: relative;
-    width: 260px;
-    height: 300px;
-    background: #fff;
-    border: 3px solid #ffab8e; /* Bordes más gruesos para dar un toque más real */
-    border-radius: 15px; /* Bordes redondeados más suaves */
+.main-container {
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transform-style: preserve-3d; /* Permite la animación de 3D */
-    transition: transform 1s; /* Tiempo de animación al girar */
-    cursor: pointer; /* Cambia el cursor cuando pasas sobre la carta */
-    margin: 20px;
-}
-
-/* Efecto de giro al hacer clic */
-.card.clicked {
-    transform: rotateY(180deg); /* Gira la carta en el eje Y */
-}
-
-/* Estilo del contenido de la carta */
-.card-header {
-    background: #ffd6ba;
-    padding: 15px;
-    border-radius: 15px 15px 0 0;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* Cuerpo de la carta */
-.card-body {
     padding: 20px;
-    font-size: 1.1rem;
-    color: #555;
-    font-weight: 500;
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Pie de la carta */
-.card-footer {
-    background: #ffd6ba;
-    padding: 10px;
-    border-radius: 0 0 15px 15px;
-    font-size: 1rem;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+.main-title {
+    color: #d63031;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-out;
 }
 
-/* Mensaje posterior que aparece después de girar */
-.card .back {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Escena 3D */
+.scene {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+/* Tarjeta */
+.card {
     width: 100%;
     height: 100%;
-    background: #ffab8e;
-    border: 3px solid #ffab8e;
-    border-radius: 15px;
-    color: white;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Frente */
+.card-front {
+    background: linear-gradient(to bottom right, #fff, #ffeaa7);
+    border: 8px solid white;
+    transform: rotateY(0deg);
+}
+
+.card-front::before {
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 2px dashed #fab1a0;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.heart-icon {
+    font-size: 4rem;
+    animation: heartbeat 1.5s infinite;
+}
+
+.card-header {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.click-hint {
+    font-size: 0.9rem;
+    color: #747d8c;
+    margin-top: auto;
+    animation: bounce 2s infinite;
+}
+
+.card-footer-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #a4b0be;
+    font-weight: 600;
+}
+
+/* Reverso */
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    border: 8px solid white;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff9ff3' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.message-title {
+    color: var(--primary-color);
     font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fab1a0;
+    padding-bottom: 10px;
+    width: 100%;
     text-align: center;
-    backface-visibility: hidden; /* Evita que el reverso se vea cuando gira */
-    transform: rotateY(180deg); /* Reverso de la carta */
 }
 
-/* Asegurarse de que el reverso de la carta no se vea hasta que se gire */
-.card .back p {
-    margin: 0;
+.message-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #2d3436;
+    font-style: italic;
+    text-align: center;
 }
 
-/* Estilo del botón de WhatsApp */
+.decoration {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Botón WhatsApp */
 .whatsapp-button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     background-color: #25D366;
     color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
     text-decoration: none;
-    margin-top: 30px;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+    font-weight: bold;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Icono de WhatsApp */
-.whatsapp-button img {
-    width: 30px;
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+    fill: white;
     margin-right: 10px;
 }
 
-/* Estilo cuando el botón de WhatsApp es hover */
-.whatsapp-button:hover {
-    background-color: #128C7E;
+/* Animaciones */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    70% { transform: scale(1); }
 }
 
-/* Estilos responsivos para dispositivos más pequeños */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
     }
-    .card {
-        width: 100%;
-        height: auto;
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .scene {
+        width: 260px;
+        height: 350px;
+    }
+    .main-title {
+        font-size: 2rem;
     }
 }
